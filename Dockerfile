@@ -3,9 +3,10 @@
 FROM python:3
 
 # Install boto3 
-# --no-cache-dir to reduce dockfile size
+# use --no-cache-dir to reduce Dockerfile size
 
-RUN pip install --no-cache-dir
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir boto3
 
 CMD "python3"
  
